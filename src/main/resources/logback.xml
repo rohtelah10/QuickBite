@@ -1,0 +1,19 @@
+<configuration>
+    <!-- Set the logging level for Hibernate to ERROR -->
+    <logger name="org.hibernate" level="ERROR"/>
+    <logger name="org.hibernate.engine" level="ERROR"/>
+    <logger name="org.hibernate.transaction" level="ERROR"/>
+    <logger name="org.hibernate.tool.hbm2ddl" level="ERROR"/>
+    <logger name="org.hibernate.resource.transaction.backend.jdbc.internal" level="ERROR"/>
+
+    <!-- Console output configuration -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>

@@ -1,0 +1,38 @@
+<!DOCTYPE hibernate-configuration SYSTEM "C:\Users\harsh\Downloads\hibernate-configuration-3.0 (1).dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- JDBC Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/foodorderdb</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">harshit123...</property>
+
+        <!-- Specify dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Enable Hibernate’s automatic session context management -->
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <!-- Echo all executed SQL to stdout -->
+
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <!-- Set Hibernate log level to ERROR -->
+        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.format_sql">false</property>
+        <property name="hibernate.use_sql_comments">false</property>
+
+        <!-- Specify annotated classes -->
+        <mapping class="com.QuickBite.model.User"/>
+        <mapping class="com.QuickBite.model.Restaurant"/>
+        <mapping class="com.QuickBite.model.Menu"/>
+        <mapping class="com.QuickBite.model.Order"/>
+        <mapping class="com.QuickBite.model.OrderDetail"/>
+        <mapping class="com.QuickBite.model.Review"/>
+        <mapping class="com.QuickBite.model.PaymentMethod"/>
+        <mapping class="com.QuickBite.model.Address"/>
+        <mapping class="com.QuickBite.model.Promotion"/>
+        <mapping class="com.QuickBite.model.Staff"/>
+        <mapping class="com.QuickBite.model.Feedback"/>
+    </session-factory>
+</hibernate-configuration>
